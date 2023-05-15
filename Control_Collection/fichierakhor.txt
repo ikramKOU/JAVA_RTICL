@@ -1,0 +1,18 @@
+	if (e.getSource() == ajout_tab) {
+		            String name = textField.getText();
+		            int REF = Integer.parseInt(textField_1.getText());
+		            int P = Integer.parseInt(textField_2.getText());
+		            int Q = Integer.parseInt(textField_3.getText());
+
+                    
+		          
+		            
+		            String data = "[" +name + "," + REF + "," + P +"," + Q +  "]" +"\n";
+		            try {
+		                BufferedWriter writer = new BufferedWriter(new FileWriter("fichierakhor.json", true));
+		                writer.write(data);
+		                writer.close();
+		            } catch (IOException ex) {
+		                ex.printStackTrace();
+		            }
+		        }
